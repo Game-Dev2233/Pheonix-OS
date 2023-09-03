@@ -1,10 +1,11 @@
 # Phoenix OS
 Phoenix OS is a simple CLI OS for any i386 supported CPU and should run on your average i386
 # What is the strucure for code
-It had 4 main folders boot for the bootloaders code then kernel for what the bootloader loads right after then drivers for
-display keyboards and ports support CPU for interupts for IO to even work and a folder inside of the kernel folder commencom that contains stuff for the command line
+It has four main folders: boot for the bootloader's code, kernel for the kernel, drivers for display, keyboards, and port support, CPU for interrupts for I/O.
 # Why does this OS even exist
-Meh just a hobby because why not mess around with a very difficult coding channleng that took many companys with over 100 people to make
-in 3 years because I have access to the internet to do all of this and find freestanding code and frankinstine a custom OS
+Meh just a random project because why not mess around with a very difficult coding channleng that took many companys with over 100 people to make in 3 years. After all I have access to the internet to do all of this and they did not have that and I can find the source code to windows XP on github so why not build a complex system
 # Todo
-Check the kernel.c after the includes it should have the TODO list
+Add Fat(32/16/12) Support to the OS
+BASIC
+Program Saving for BASIC
+Saving Compiled Apps to a FS
