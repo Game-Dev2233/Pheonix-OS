@@ -1,11 +1,5 @@
-#include "../cpu/idt.h"
-#include "../cpu/isr.h"
-#include "../cpu/timer.h"
-#include "../drivers/display.h"
-#include "../drivers/keyboard.h"
-#include "util.h"
-#include "mem.h"
-#include "commencom/TODO.h"
+#include "commencoms/Stdio.h"
+#include "commencom/Coms.h"
 /*
                 TODO
     Add Fat(32/16/12) Support to the OS
@@ -88,50 +82,7 @@ void start_kernel() {
     // Clear the screen then give the welcome prompt then show C:>
     clear_screen();
     print_nl();
-    print("Hello Beta Tester or Developer please use OSHelp to learn about Phoenix OS\nPlease use Help to find out all commands\n");
+    print("Hello Beta Tester or Developer please use OSHelp to learn about Phoenix OS\n");
+    print("Please use Help to find out all commands\n"");
     print("C:> ");
-}
-
-/*
-this is just a empty command template
-else if (compare_string(input, "") == 0) {
-        print("\nC:> ");
-    }
-*/
-// Defines the execute command for well executing commands
-// Defines the execute command for well-executing commands
-void execute_command(char *input) {
-    if (compare_string(input, "EXIT") == 0) {
-        // clears the screen to make it seem like it just shut down
-        clear_screen();
-        // halts the CPU then the entire CPU just is off
-        asm volatile("hlt");
-    } else if (compare_string(input, "TODO") == 0) {
-        todolist();
-        print("\nC:> ");
-    } else if (compare_string(input, "CLEAR") == 0) {
-        // clears the screen
-        clear_screen();
-        print("\nC:> ");
-    } else if (compare_string(input, "CLS") == 0) {
-        clear_screen();
-        print("\nC:> ");
-    } else if (compare_string(input, "HELLO") == 0) {
-        print("Hello, World!\n");
-        print("\nC:> ");
-    } else if (compare_string(input, "OSHELP") == 0) {
-        print("Phoenix OS is a simple Terminal OS with simple IO basic memory management and a\n");
-        print("simple planned Filesystem Without folders and a simple x86_64-elf-gcc compiler\n");
-        print("port");
-        print("\nC:> ");
-    } else if (compare_string(input, "HELP") == 0) {
-        print("Exit: Shutdown the device\nClear or CLS: Clear the screen\nHello: Says Hello, World!\nHelp: Shows all commands\nOSHelp: Shows Info and plans for the OS");
-        print("\nC:> ");
-    } else if (compare_string(input, "") == 0) {
-        print("\nC:> ");
-    } else {
-        print("Illegal command: ");
-        print(input);
-        print("\nC:> ");
-    }
 }
