@@ -15,9 +15,6 @@ void execute_command(char *input) {
         clear_screen();
         // halts the CPU then the entire CPU just is off
         asm volatile("hlt");
-    } else if (compare_string(input, "OSVER") == 0) {
-        print("OS Version 1.0");
-        print("\nC:> ");
     } else if (compare_string(input, "TODO") == 0) {
         todolist();
         print("\nC:> ");
