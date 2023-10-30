@@ -1,4 +1,5 @@
 #include "Basic.h"
+float osver = 1.0.0;
 /*
 this is just a empty command template
 else if (compare_string(input, "") == 0) {
@@ -13,6 +14,11 @@ void execute_command(char *input) {
         clear_screen();
         // halts the CPU then the entire CPU just is off
         asm volatile("hlt");
+    } else if (compare_string(input, "OSINFO") == 0) {
+        print("OS Version: ");
+        print(osver);
+        print("Developer");
+        print("\nC:> ");
     } else if (compare_string(input, "TODO") == 0) {
         todolist();
         print("\nC:> ");
@@ -32,7 +38,12 @@ void execute_command(char *input) {
         print("port");
         print("\nC:> ");
     } else if (compare_string(input, "HELP") == 0) {
-        print("Exit: Shutdown the device\nClear or CLS: Clear the screen\nHello: Says Hello, World!\nHelp: Shows all commands\nOSHelp: Shows Info and plans for the OS");
+        print("Exit: Shutdown the device\n");
+        print("Clear or CLS: Clear the screen\n");
+        print("Hello: Says Hello, World!\n");
+        print("Help: Shows all commands\n");
+        print("OSHelp: Shows Info and plans for the OS\n");
+        print("OSInfo: General OS information");
         print("\nC:> ");
     } else if (compare_string(input, "") == 0) {
         print("\nC:> ");

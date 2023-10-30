@@ -82,6 +82,7 @@ void start_kernel() {
     // Clear the screen then give the welcome prompt then show C:>
     clear_screen();
     print_nl();
-    print("Hello Beta Tester or Developer please use OSHelp to learn about Phoenix OS\nPlease use Help to find out all commands\n");
+    print("Hello Beta Tester or Developer please use OSHelp to learn about Phoenix OS\n");
+    print("Please use Help to find out all commands\n"");
     print("C:> ");
 }
