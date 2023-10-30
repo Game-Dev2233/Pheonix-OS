@@ -1,12 +1,5 @@
-#include "../cpu/idt.h"
-#include "../cpu/isr.h"
-#include "../cpu/timer.h"
-#include "../drivers/display.h"
-#include "../drivers/keyboard.h"
-#include "util.h"
-#include "mem.h"
+#include "commencoms/Stdio.h"
 #include "commencom/Coms.h"
-#include "commencom/TODO.h"
 /*
                 TODO
     Add Fat(32/16/12) Support to the OS
