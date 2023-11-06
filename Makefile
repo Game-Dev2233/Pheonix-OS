@@ -8,7 +8,7 @@ HEADERS = $(wildcard kernel/*.h  drivers/*.h cpu/*.h)
 OBJ_FILES = ${C_SOURCES:.c=.o cpu/interrupt.o}
 
 # First rule is the one executed when no parameters are fed to the Makefile
-all: run
+all: run 
 # Notice how dependencies are built as needed
 kernel.bin: boot/kernel_entry.o ${OBJ_FILES}
 	x86_64-elf-ld -m elf_i386 -o $@ -Ttext 0x1000 $^ --oformat binary
