@@ -1,15 +1,4 @@
-#include "commencom/Stdio.h"
 #include "commencom/Common.h"
-/*
-                TODO
-    Add Fat(32/16/12) Support to the OS
-            Ported C compiler
-                BASIC
-        Program Saving for BASIC
-        Application Binary Support
-            Saving Compiled Apps to a FS
-        Add a simple GUI (Maybe)
-*/
 void* alloc(int n) {
     int *ptr = (int *) mem_alloc(n * sizeof(int));
     if (ptr == NULL_POINTER) {
