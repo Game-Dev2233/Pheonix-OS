@@ -9,3 +9,5 @@ Add Fat(32/16/12) Support to the OS
 BASIC
 Program Saving for BASIC
 Saving Compiled Apps to a FS
+# Archived
+Pheonix-OS has been archived since most of it was buggy/did not work half of the time and took WAY to much time to develop as of 11/30/23
